@@ -1,12 +1,12 @@
-class QueueEmpty:
+class QueueEmptyError(Exception):
     def __init__(self, message: str) -> str:
         self.message = message
 
-class QueueFull:
+class QueueFullError(Exception):
     def __init__(self, message: str) -> str:
         self.message = message
 
-class QueueError:
+class QueueError(Exception):
     def __init__(self, message: str) -> str:
         self.message = message
 
@@ -44,7 +44,7 @@ class Queue:
             else:
                 self.items.append(item)
         else:
-            raise QueueFull(f"Cannot enqueue at full size: {self.size}")
+            raise QueueFullError(f"Cannot enqueue at full size: {self.size}")
 
         return self.items
 
@@ -54,14 +54,14 @@ class Queue:
             self.items.pop(0)
 
         else:
-            raise QueueEmpty("Cannot dequeue from an empty queue.")
+            raise QueueEmptyError("Cannot dequeue from an empty queue.")
 
         return self.items
 
     def peek(self) -> object:
 
         if not bool(self):
-            raise QueueEmpty("Cannot peek from an empty queue.")
+            raise QueueEmptyError("Cannot peek from an empty queue.")
 
         self.items[0]
 
@@ -76,7 +76,7 @@ class Queue:
             self.enqueue(queue)
 
         else:
-            raise QueueEmpty(f"Provided queue is empty, nothing to merge.")
+            raise QueueEmptyError(f"Provided queue is empty, nothing to merge.")
 
         return self.items
 
@@ -91,7 +91,7 @@ class Queue:
             return count
 
         else:
-            raise QueueEmpty("Queue is empty, no item frequency to calculate.")
+            raise QueueEmptyError("Queue is empty, no item frequency to calculate.")
 
     def copy(self) -> object:
         if bool(self):
