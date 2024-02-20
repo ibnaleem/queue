@@ -63,7 +63,7 @@ class Queue:
         if not bool(self):
             raise QueueEmptyError("Cannot peek from an empty queue.")
 
-        self.items[0]
+        return self.items[0]
 
     def clear(self) -> object:
 
