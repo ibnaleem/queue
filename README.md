@@ -1,7 +1,4 @@
 # Queue
-Queue data structure in Python
-
-## Overview
 <div align="center">
   <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230726165642/Queue-Data-structure1.png" width="50%" height="50%">
   <h6><i><a href="https://www.geeksforgeeks.org/queue-data-structure/">Queue Data Structure, GeeksForGeeks.org</a></i></h6>
