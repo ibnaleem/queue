@@ -4,7 +4,7 @@
   <h6><i><a href="https://www.geeksforgeeks.org/queue-data-structure/">Queue Data Structure, GeeksForGeeks.org</a></i></h6>
 </div>
 
-A Queue is a linear data structure characterised by its first-in-first-out (FIFO) behaviour. Queues `pop` (remove, `'dequeue'`) the `head` (front, first element) of the Queue (i.e `1` is `'dequeued'` from `[1,2,3,4,5]`) and `append` (add, put, `'enqueue'`) an element at the `tail` (back, tail, rear, last element) of the Queue. Queues are fixed sized, meaning an object cannot be enqueued if the Queue is full.
+A Queue is a linear data structure characterised by its first-in-first-out (FIFO) behaviour. Queues `pop` (remove, `'dequeue'`) the `head` (front, first element) of the Queue (i.e `1` is `'dequeued'` from `[1,2,3,4,5]`) and `append` (add, put, `'enqueue'`) an element at the `tail` (back, rear, last element) of the Queue. Queues are fixed sized, meaning an object cannot be enqueued if the Queue is full.
 ### Example
 ```python
 q = Queue([1,2,3,4,5])
